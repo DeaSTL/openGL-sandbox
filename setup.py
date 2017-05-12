@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup,find_packages
 
 setup(name='OpenGL-Sandbox',
     version='0.1',
@@ -7,11 +7,12 @@ setup(name='OpenGL-Sandbox',
     author='DeaSTL',
     author_email='doomlaboratory@gmail.com',
     license='',
-    packages=[''],
+    packages=find_packages(),
     install_requires=[
           'numpy',
           'pygame',
-          'pyglet'
+          'pyglet',
+          'opensimplex'
       ],
     zip_safe=False,
 )
