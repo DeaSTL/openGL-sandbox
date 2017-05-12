@@ -5,12 +5,12 @@ class chunk():
 	def __init__(self,x,y,spnoise):
 		self.x = x
 		self.y = y 
-		self.objectList = np.empty((15,15),dtype=object)
+		self.objectList = np.empty((16,16),dtype=object)
 		self.unit_width = 32
 		self.total_width = self.unit_width*16
 		for i in range(0,15):
 			for j in range(0,15):
-				y = spnoise.noise2d(x=i,y=j)*1000
+				y = spnoise.noise2d(x=i,y=j)*100
 				
 				if y>2:
 					self.objectList[i][j] = blocks.dirt(i+1*self.unit_width*self.x,j+1*self.unit_width*self.y)
